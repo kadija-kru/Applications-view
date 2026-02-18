@@ -27,13 +27,20 @@ gulp trust-dev-cert
 
 ### 2. Local Development (Optional)
 ```bash
-# Test in local workbench
+# Test in local workbench (default)
 gulp serve
+# Opens: https://localhost:4321/temp/workbench.html
 
-# Or test in SharePoint Online workbench
+# Or test in SharePoint Online
+gulp serve --config=sharepoint
+# Opens: Your SharePoint site with debug params
+
+# Or start server without opening browser
 gulp serve --nobrowser
 # Then navigate to: https://yourtenant.sharepoint.com/_layouts/workbench.aspx
 ```
+
+**Note:** If `gulp serve` opens SharePoint Online instead of local workbench, see [Troubleshooting Guide](./TROUBLESHOOTING.md#issue-gulp-serve-opens-sharepoint-online-instead-of-local-workbench).
 
 ### 3. Build for Production
 ```bash

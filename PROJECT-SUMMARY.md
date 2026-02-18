@@ -1,5 +1,23 @@
 # Application Tiles Webpart - Project Summary
 
+## 🎯 What is This? (WebPart vs Page)
+
+**This is a SharePoint Framework (SPFx) WebPart** - a reusable component, NOT a complete page.
+
+### Quick Clarification
+
+| What This IS ✅ | What This is NOT ❌ |
+|----------------|---------------------|
+| 📦 Reusable WebPart component | 📄 Standalone page |
+| 🔧 Can be added to any SharePoint page | 🌐 Complete website |
+| 🎨 One of many components on a page | 🏗️ Full application |
+| ⚙️ Configurable widget | 🔗 Has its own URL |
+
+**Simple Explanation:**  
+This WebPart is like a **widget** or **building block** that SharePoint administrators can add to any page to display a grid of application icons. It's not a complete page or standalone application.
+
+---
+
 ## Overview
 
 This project delivers a complete, production-ready SharePoint Framework (SPFx) webpart that displays a configurable grid of application tiles. The webpart enables users to create professional application portals without writing any code.

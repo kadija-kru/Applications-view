@@ -26,15 +26,6 @@ export const AppTileCard: React.FC<IAppTileCardProps> = ({ tile }) => {
     }
   };
 
-  const isValidUrl = (url: string): boolean => {
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  };
-
   const renderIcon = (): JSX.Element => {
     // Check if iconName is a URL (http/https or data URI)
     if (
