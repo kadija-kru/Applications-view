@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "app-tiles-webpart-client-side-solution",
+    "id": "9f3c8c3e-5b1a-4f2c-8d3e-7a6b9c2d1e4f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Your Company",
+      "websiteUrl": "https://www.example.com",
+      "privacyUrl": "https://www.example.com/privacy",
+      "termsOfUseUrl": "https://www.example.com/terms"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Displays a configurable grid of application tiles"
+      },
+      "longDescription": {
+        "default": "A SharePoint Framework webpart that displays application tiles in a responsive grid layout. Users can configure the tiles through the property pane without writing any code."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "App Tiles Feature",
+        "description": "Displays configurable application tiles",
+        "id": "8e4c9d2f-6b3a-5c1d-9e2f-3a7b8c4d1e5f",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/app-tiles-webpart.sppkg"
+  }
+}
