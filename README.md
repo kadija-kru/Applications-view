@@ -46,10 +46,13 @@ npm install -g gulp-cli
    cd Applications-view
    ```
 
-2. **Install dependencies**:
+2. **Install dependencies** ⚠️ **Required before running any commands**:
    ```bash
    npm install
    ```
+   
+   > **Important**: You must run `npm install` before using `gulp serve` or any other commands. 
+   > If you see "Local modules not found" error, it means dependencies haven't been installed yet.
 
 3. **Trust the development certificate** (first time only):
    ```bash
@@ -164,6 +167,10 @@ The webpart comes pre-configured with 8 sample applications:
 ## Troubleshooting
 
 ### Build Errors
+
+**Error**: "Local modules not found" or "Dependencies not installed"
+- **Solution**: Run `npm install` to install all dependencies before running any gulp commands
+- **Details**: This error occurs when the `node_modules` directory is missing. Always run `npm install` after cloning the repository or when dependencies haven't been installed yet.
 
 **Error**: "Your dev environment is running NodeJS version..."
 - **Solution**: Ensure you're using Node.js 18.17.1 or higher (but < 19.0.0)
