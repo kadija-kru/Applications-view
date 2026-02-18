@@ -1,0 +1,68 @@
+{
+  "tiles": [
+    {
+      "id": "1",
+      "title": "HR Portal",
+      "description": "Leave, contracts and documents",
+      "iconName": "ContactCard",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/hr",
+      "openInNewTab": false
+    },
+    {
+      "id": "2",
+      "title": "Project Manager",
+      "description": "Track and manage projects",
+      "iconName": "ProjectCollection",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/projects",
+      "openInNewTab": false
+    },
+    {
+      "id": "3",
+      "title": "Sales Tracker",
+      "description": "Monitor sales and opportunities",
+      "iconName": "Money",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/sales",
+      "openInNewTab": false
+    },
+    {
+      "id": "4",
+      "title": "IT Support",
+      "description": "Submit and track tickets",
+      "iconName": "Repair",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/itsupport",
+      "openInNewTab": true
+    },
+    {
+      "id": "5",
+      "title": "Inventory System",
+      "description": "Manage inventory and assets",
+      "iconName": "ProductList",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/inventory",
+      "openInNewTab": false
+    },
+    {
+      "id": "6",
+      "title": "Finance Hub",
+      "description": "Financial reports and analytics",
+      "iconName": "BarChartVertical",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/finance",
+      "openInNewTab": false
+    },
+    {
+      "id": "7",
+      "title": "Learning Center",
+      "description": "Training and development",
+      "iconName": "Education",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/learning",
+      "openInNewTab": false
+    },
+    {
+      "id": "8",
+      "title": "Customer Portal",
+      "description": "Client management and support",
+      "iconName": "People",
+      "linkUrl": "https://yourcompany.sharepoint.com/sites/customers",
+      "openInNewTab": false
+    }
+  ]
+}
