@@ -1,5 +1,33 @@
 # Application Tiles SharePoint Framework Webpart
 
+**[English](#english) | [Français](README.fr.md)**
+
+## 🎯 What is this?
+
+This is a **SharePoint Framework (SPFx) WebPart** - a reusable component/widget that you can add to SharePoint pages.
+
+### WebPart vs Page - Understanding the Difference
+
+**This project is a WebPart (Component) ✅**, not a standalone page ❌
+
+| WebPart (This Project) | Full Page |
+|------------------------|-----------|
+| 📦 Reusable component | 📄 Complete website |
+| ➕ Can be added to any SharePoint page | 🌐 Has its own URL |
+| 🔧 Configurable through UI | 🏗️ Fixed structure |
+| 🎨 Multiple per page | 📃 Single entity |
+
+**Example Usage:**
+1. Create or edit a SharePoint page
+2. Click "Add a web part"
+3. Find "App Tiles" and add it
+4. Configure your applications through the property pane
+5. Add other web parts as needed (news, calendar, etc.)
+
+---
+
+## 📱 What it does
+
 A modern SharePoint Framework (SPFx) webpart that displays a configurable grid of application tiles in a responsive layout. Perfect for creating application portals and quick-access dashboards.
 
 ## Features
