@@ -126,14 +126,47 @@ Liste complète : https://uifabricicons.azurewebsites.net/
 
 ## 🛠️ Développement Local
 
-Pour tester localement :
+### Workbench Local (Recommandé pour le développement)
+
+Pour tester localement sans nécessiter SharePoint :
 
 ```bash
 npm install
 npm run serve
+# ou
+gulp serve
 ```
 
-Ouvrez https://localhost:4321/temp/workbench.html
+Cela ouvrira le workbench **local** SharePoint à `https://localhost:4321/temp/workbench.html`
+
+> **Note** : Le workbench local offre une expérience de développement rapide et ne nécessite pas d'accès à SharePoint Online. Cependant, certaines fonctionnalités spécifiques à SharePoint peuvent ne pas fonctionner dans le workbench local.
+
+### Workbench SharePoint Online
+
+Pour tester dans votre tenant SharePoint Online avec toutes les fonctionnalités :
+
+**Option 1 : Ouvrir une page SharePoint spécifique**
+```bash
+gulp serve --config=sharepoint
+```
+
+Cela ouvrira une page de votre site SharePoint avec les paramètres de débogage.
+
+> **Important** : Mettez à jour l'URL dans `config/serve.json` sous la configuration `sharepoint` pour correspondre à votre site SharePoint.
+
+**Option 2 : Ouvrir le workbench SharePoint**
+```bash
+gulp serve --config=sharepointWorkbench
+```
+
+Cela ouvrira le workbench hébergé par SharePoint.
+
+**Option 3 : URL manuelle (sans ouverture automatique du navigateur)**
+```bash
+gulp serve --nobrowser
+```
+
+Puis naviguez manuellement vers votre site SharePoint et ajoutez les paramètres de débogage affichés dans la console.
 
 ## 📚 Documentation Complète
 

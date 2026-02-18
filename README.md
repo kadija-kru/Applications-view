@@ -89,9 +89,9 @@ npm install -g gulp-cli
 
 ## Development
 
-### Local Workbench
+### Local Workbench (Recommended for Development)
 
-Test the webpart in your local environment:
+Test the webpart in your local environment without requiring SharePoint:
 
 ```bash
 npm run serve
@@ -99,15 +99,36 @@ npm run serve
 gulp serve
 ```
 
-This will open the SharePoint Workbench at `https://localhost:4321/temp/workbench.html`
+This will open the **local** SharePoint Workbench at `https://localhost:4321/temp/workbench.html`
+
+> **Note**: The local workbench provides a fast development experience and doesn't require access to SharePoint Online. However, some SharePoint-specific features may not work in the local workbench.
 
 ### SharePoint Online Workbench
 
-Test in your SharePoint Online tenant:
+Test in your SharePoint Online tenant for full functionality:
 
+**Option 1: Open specific SharePoint page**
+```bash
+gulp serve --config=sharepoint
+```
+
+This will open `https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx` with debug parameters.
+
+> **Important**: Update the URL in `config/serve.json` under the `sharepoint` configuration to match your SharePoint site.
+
+**Option 2: Open SharePoint workbench page**
+```bash
+gulp serve --config=sharepointWorkbench
+```
+
+This will open the SharePoint-hosted workbench at `https://contoso.sharepoint.com/_layouts/workbench.aspx`
+
+**Option 3: Manual URL (no browser auto-open)**
 ```bash
 gulp serve --nobrowser
 ```
+
+Then manually navigate to your SharePoint site and append the debug query string shown in the console.
 
 Then navigate to: `https://yourtenant.sharepoint.com/_layouts/workbench.aspx`
 
@@ -205,6 +226,44 @@ The webpart comes pre-configured with 8 sample applications:
 
 **Error**: "Cannot find module '@pnp/spfx-property-controls'"
 - **Solution**: Run `npm install` to install all dependencies
+
+### Development Server Issues
+
+**Issue**: `gulp serve` opens SharePoint Online site instead of local workbench
+- **Solution**: This is the expected behavior when using `--config=sharepoint`. To open the local workbench, use:
+  ```bash
+  gulp serve
+  # or explicitly use the default config
+  gulp serve --config=default
+  ```
+- **Details**: The `config/serve.json` file contains different serve configurations:
+  - `default`: Opens local workbench at `https://localhost:4321/temp/workbench.html`
+  - `sharepoint`: Opens your SharePoint Online site for testing with real data
+  - `sharepointWorkbench`: Opens SharePoint-hosted workbench
+
+**Issue**: "Cannot connect to https://localhost:4321"
+- **Solution**: Trust the development certificate first:
+  ```bash
+  gulp trust-dev-cert
+  ```
+- If that doesn't work, try:
+  ```bash
+  gulp untrust-dev-cert
+  gulp trust-dev-cert
+  ```
+
+**Issue**: Webpart doesn't appear in the local workbench
+- **Solution**: 
+  1. Make sure `gulp serve` is running without errors
+  2. In the workbench, click the "+" icon to add a web part
+  3. Look for "App Tiles" in the web part picker
+  4. Check the console for any JavaScript errors
+
+**Issue**: Changes not reflecting in the workbench
+- **Solution**: 
+  1. The workbench should auto-reload when you save files
+  2. If not, try refreshing the browser (F5)
+  3. If still not working, stop `gulp serve` (Ctrl+C) and restart it
 
 ### Runtime Errors
 
