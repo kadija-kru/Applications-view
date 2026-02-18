@@ -71,7 +71,7 @@ Ce WebPart affiche une **grille d'icônes d'applications** configurable et respo
 
 1. **Cloner le dépôt**
    ```bash
-   git clone <url-du-depot>
+   git clone <url-du-dépôt>
    cd Applications-view
    ```
 
@@ -118,7 +118,7 @@ Une fois le WebPart ajouté à votre page :
 - `Money` - Pour applications financières
 - `Repair` - Pour support IT
 - `ProductList` - Pour inventaire
-- `BarChartVertical` - Pour analytiques
+- `BarChartVertical` - Pour analytique
 - `Education` - Pour formation
 - `People` - Pour portails clients
 
