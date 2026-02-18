@@ -1,0 +1,43 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.appTiles {
+  padding: 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tilesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+
+    // Tablet: 3 columns
+    @media (max-width: 1024px) and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Mobile: 2 columns
+    @media (max-width: 767px) and (min-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Small mobile: 1 column
+    @media (max-width: 479px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .emptyState {
+    text-align: center;
+    padding: 60px 20px;
+    color: "[theme:neutralSecondary, default: #666]";
+
+    > * {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "548f5803-f95a-4219-8722-1bf3fd51053c",
+  "alias": "AppTilesWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Content" },
+    "title": { "default": "App Tiles" },
+    "description": { "default": "Displays a configurable grid of application tiles" },
+    "officeFabricIconFontName": "AppIconDefault",
+    "properties": {
+      "description": "Application tiles webpart",
+      "tiles": []
+    }
+  }]
+}
